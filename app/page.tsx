@@ -42,8 +42,8 @@ export default function Home() {
       <section className="hero" id="top">
         <Image
           className="hero-image"
-          src="/images/glen-phillips.jpg"
-          alt="Glen Phillips performing aboard a sailboat in Santa Barbara Harbor"
+          src="/images/interview-on-boat.jpg"
+          alt="A musician and interviewer sharing a conversation aboard a sailboat off Santa Barbara"
           fill
           priority
           sizes="100vw"
@@ -136,7 +136,7 @@ export default function Home() {
 
       <section className="learning" id="learn">
         <div className="learning-photo">
-          <Image src="/images/glen-phillips.jpg" alt="An acoustic performance on the water" fill sizes="(max-width: 800px) 100vw, 48vw" />
+          <Image src="/images/band-on-yacht.jpg" alt="A band performing for guests aboard a yacht off Santa Barbara" fill sizes="(max-width: 800px) 100vw, 48vw" />
         </div>
         <div className="learning-copy">
           <p className="eyebrow light">Creativity belongs to everyone</p>
