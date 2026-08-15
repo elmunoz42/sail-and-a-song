@@ -2,10 +2,10 @@ import Image from "next/image";
 
 const episodes = [
   {
-    title: "Mendeleyev",
-    subtitle: "From NBC’s The Voice · Part One",
-    image: "/images/mendeleyev.jpg",
-    href: "https://www.youtube.com/watch?v=HK_1zCOgLj0",
+    title: "Zach Gill & David Segall",
+    subtitle: "Episode one · Aboard Sail & A Song",
+    image: "/images/episode-one.jpg",
+    href: "https://www.youtube.com/watch?v=dmm5YLhoB28",
   },
   {
     title: "Kenny Loggins",
@@ -57,7 +57,7 @@ export default function Home() {
             songwriters—recorded aboard a sailboat in Santa Barbara Harbor.
           </p>
           <div className="hero-actions">
-            <a className="button button-light" href="#featured"><span className="play-mini">▶</span> Watch the latest episode</a>
+            <a className="button button-light" href="#featured"><span className="play-mini">▶</span> Watch the featured episode</a>
             <a className="text-link light-link" href="#about">Discover our story <span>↓</span></a>
           </div>
         </div>
@@ -91,17 +91,17 @@ export default function Home() {
         <div className="featured-heading">
           <div>
             <p className="eyebrow light">Now playing</p>
-            <h2>Latest from<br /><em>the harbor</em></h2>
+            <h2>Featured from<br /><em>the harbor</em></h2>
           </div>
           <p>
-            Mendeleyev, known from NBC’s <i>The Voice</i>, steps aboard for an
-            intimate performance and conversation about where songs begin.
+            Glen Phillips of Toad the Wet Sprocket steps aboard for an intimate
+            performance and conversation about the craft behind the music.
           </p>
         </div>
         <div className="video-frame">
           <iframe
-            src="https://www.youtube-nocookie.com/embed/HK_1zCOgLj0?rel=0"
-            title="A Sail and a Song with Mendeleyev from NBC's The Voice, Part 1"
+            src="https://www.youtube-nocookie.com/embed/scZNrqTlSuA?rel=0"
+            title="Sail & A Song with Glen Phillips of Toad the Wet Sprocket"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
           />
@@ -167,7 +167,7 @@ export default function Home() {
           </a>
         </div>
         <a className="instagram-window" href="https://www.instagram.com/sailandasong" target="_blank" rel="noreferrer" aria-label="Open Sail and A Song on Instagram">
-          <Image src="/images/mendeleyev.jpg" alt="A recent Sail and A Song moment" fill sizes="(max-width: 800px) 100vw, 50vw" />
+          <Image src="/images/interview-on-boat.jpg" alt="An interview and acoustic performance aboard a sailboat" fill sizes="(max-width: 800px) 100vw, 50vw" />
           <div className="instagram-overlay">
             <span className="instagram-icon">◎</span>
             <strong>@sailandasong</strong>
