@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Script from "next/script";
 
 const episodes = [
   {
@@ -33,6 +34,7 @@ export default function Home() {
           <a href="#about">Our story</a>
           <a href="#episodes">Episodes</a>
           <a href="#learn">The idea</a>
+          <a href="#contact">Contact</a>
         </nav>
         <a className="nav-cta" href="https://www.youtube.com/@sailandasong" target="_blank" rel="noreferrer">
           Watch on YouTube <span aria-hidden="true">↗</span>
@@ -185,10 +187,36 @@ export default function Home() {
         <p className="eyebrow light">Come aboard</p>
         <h2>There’s always room<br />for one more <em>song.</em></h2>
         <p>Subscribe for new performances, songwriting stories, and a little Santa Barbara salt air.</p>
-        <a className="button button-light" href="https://www.youtube.com/@sailandasong?sub_confirmation=1" target="_blank" rel="noreferrer">
-          Subscribe on YouTube <span>↗</span>
-        </a>
+        <div className="closing-actions">
+          <a className="button button-light" href="https://www.youtube.com/@sailandasong?sub_confirmation=1" target="_blank" rel="noreferrer">
+            Subscribe on YouTube <span>↗</span>
+          </a>
+          <a className="text-link light-link" href="#contact">Get in touch <span>↓</span></a>
+        </div>
       </section>
+
+      <section className="contact" id="contact">
+        <div className="contact-heading">
+          <p className="eyebrow">Say hello</p>
+          <h2>Come aboard, or<br />just <em>say hello.</em></h2>
+          <p>
+            Collaborations, guest suggestions, private harbor sessions, or a
+            song you think belongs on the water—send a note and we&apos;ll be in touch.
+          </p>
+        </div>
+        <div className="contact-form">
+          <div
+            className="hs-form-frame"
+            data-region="na2"
+            data-form-id="f5523dfe-73f9-4a0e-9798-aa9fd4250432"
+            data-portal-id="247193404"
+          />
+        </div>
+      </section>
+      <Script
+        src="https://js-na2.hsforms.net/forms/embed/247193404.js"
+        strategy="afterInteractive"
+      />
 
       <footer>
         <a className="brand footer-brand" href="#top">

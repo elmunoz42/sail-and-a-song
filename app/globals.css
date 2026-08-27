@@ -52,16 +52,16 @@ nav a:hover { color: var(--accent-soft); opacity: 1; }
 .nav-cta:hover { background: var(--white); color: var(--ink); border-color: var(--white); }
 
 .hero { min-height: 820px; height: 100vh; position: relative; display: flex; align-items: center; color: var(--white); background: url('/images/interview-on-boat.jpg') center / cover no-repeat; }
-.hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: saturate(1) contrast(1.03) brightness(.96); }
+.hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: saturate(1.02) contrast(1.02); }
 .hero-wash {
   position: absolute; inset: 0;
   background:
     /* darken behind the left-aligned text only, then fade quickly so the video stays bright and sunny */
-    linear-gradient(90deg, rgba(8,29,30,.9) 0%, rgba(8,29,30,.64) 30%, rgba(8,29,30,.24) 55%, transparent 78%),
+    linear-gradient(90deg, rgba(8,29,30,.8) 0%, rgba(8,29,30,.5) 30%, rgba(8,29,30,.18) 55%, transparent 76%),
     /* light touch to ground the coordinates + actions */
-    linear-gradient(0deg, rgba(6,24,26,.42) 0%, transparent 36%),
+    linear-gradient(0deg, rgba(6,24,26,.34) 0%, transparent 34%),
     /* settle the header/nav at the top */
-    linear-gradient(180deg, rgba(6,24,26,.38) 0%, transparent 20%);
+    linear-gradient(180deg, rgba(6,24,26,.32) 0%, transparent 20%);
 }
 .hero-content { position: relative; z-index: 1; margin-left: 9vw; max-width: 810px; padding-top: 70px; text-shadow: 0 1px 32px rgba(5,20,21,.45); }
 .eyebrow { margin: 0 0 22px; color: var(--accent-ink); text-transform: uppercase; letter-spacing: .22em; font-size: 11px; font-weight: 700; }
@@ -144,6 +144,35 @@ h1 em, h2 em { color: var(--accent); font-weight: 400; font-style: italic; }
 
 .closing { min-height: 620px; padding: 120px 7vw; display: flex; flex-direction: column; align-items: center; text-align: center; justify-content: center; color: var(--white); background: radial-gradient(circle at 50% 118%, var(--sea), transparent 46%), var(--deep); }
 .closing > p:not(.eyebrow) { font: 19px/1.6 var(--font-serif-stack); max-width: 600px; color: rgba(255,253,248,.82); margin: 30px 0 36px; }
+.closing-actions { display: flex; align-items: center; gap: 30px; }
+
+.contact { display: grid; grid-template-columns: .85fr 1.15fr; gap: 6vw; align-items: start; background: var(--cream); padding: 130px 8vw 140px; }
+.contact-heading { position: sticky; top: 120px; }
+.contact-heading h2 { margin: 6px 0 0; }
+.contact-heading > p { max-width: 400px; font: 17px/1.7 var(--font-serif-stack); color: var(--muted); margin: 30px 0 0; }
+.contact-form { background: var(--white); border: 1px solid rgba(13,43,44,.1); border-radius: 6px; padding: 40px 42px; box-shadow: 0 24px 60px rgba(13,43,44,.08); }
+/* HubSpot injected form — nudge it toward the brand without fighting its layout */
+.contact-form form { font-family: var(--font-sans-stack); }
+.contact-form label { font-size: 13px; font-weight: 600; letter-spacing: .01em; color: var(--deep); }
+.contact-form input:not([type="checkbox"]):not([type="radio"]),
+.contact-form textarea,
+.contact-form select {
+  width: 100%; font-family: var(--font-sans-stack); font-size: 15px; color: var(--ink);
+  padding: 12px 14px; margin-top: 6px; background: var(--cream);
+  border: 1px solid rgba(13,43,44,.16); border-radius: 4px; transition: border-color .2s, box-shadow .2s;
+}
+.contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus {
+  outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(198,138,69,.16);
+}
+.contact-form input[type="submit"], .contact-form .hs-button, .contact-form button[type="submit"] {
+  width: auto; cursor: pointer; background: var(--ink); color: var(--white);
+  border: 0; border-radius: 999px; padding: 15px 30px; margin-top: 6px;
+  font: 700 11px var(--font-sans-stack); letter-spacing: .12em; text-transform: uppercase;
+  box-shadow: 0 12px 30px rgba(13,43,44,.18); transition: transform .25s, background .25s;
+}
+.contact-form input[type="submit"]:hover, .contact-form .hs-button:hover, .contact-form button[type="submit"]:hover {
+  transform: translateY(-2px); background: var(--accent);
+}
 footer { min-height: 210px; background: var(--ink); color: var(--white); border-top: 1px solid rgba(255,255,255,.12); padding: 58px 7vw 40px; display: grid; grid-template-columns: 1.3fr 1fr .8fr auto; align-items: start; gap: 40px; }
 .footer-brand { color: var(--white); }
 footer p { margin: 0; font: italic 15px/1.6 var(--font-serif-stack); color: rgba(255,255,255,.62); }
@@ -167,6 +196,8 @@ footer small { font-size: 8px; letter-spacing: .14em; text-transform: uppercase;
   .learning-copy { padding: 85px 7vw 95px; }
   .instagram { grid-template-columns: 1fr; }
   .instagram-copy { padding: 95px 7vw; }
+  .contact { grid-template-columns: 1fr; gap: 44px; padding: 100px 7vw 110px; }
+  .contact-heading { position: static; }
   footer { grid-template-columns: 1fr 1fr; }
 }
 
@@ -176,7 +207,7 @@ footer small { font-size: 8px; letter-spacing: .14em; text-transform: uppercase;
   .nav-cta { font-size: 0; padding: 11px 13px; }
   .nav-cta span { font-size: 15px; }
   .hero { min-height: 700px; height: 94vh; }
-  .hero-wash { background: linear-gradient(90deg, rgba(8,29,30,.82), rgba(8,29,30,.42) 65%, rgba(8,29,30,.24)), linear-gradient(0deg, rgba(6,24,26,.5), transparent 52%), linear-gradient(180deg, rgba(6,24,26,.4), transparent 20%); }
+  .hero-wash { background: linear-gradient(90deg, rgba(8,29,30,.74), rgba(8,29,30,.36) 65%, rgba(8,29,30,.16)), linear-gradient(0deg, rgba(6,24,26,.42), transparent 52%), linear-gradient(180deg, rgba(6,24,26,.34), transparent 20%); }
   h1 { font-size: clamp(54px, 17vw, 84px); }
   h2 { font-size: clamp(46px, 14vw, 70px); }
   .hero-copy { font-size: 18px; }
@@ -193,6 +224,8 @@ footer small { font-size: 8px; letter-spacing: .14em; text-transform: uppercase;
   .instagram-window { min-height: 460px; }
   .instagram-overlay { left: 7vw; bottom: 35px; }
   .closing { min-height: 560px; }
+  .closing-actions { flex-direction: column; align-items: center; gap: 24px; }
+  .contact-form { padding: 30px 24px; }
   footer { grid-template-columns: 1fr; gap: 28px; }
 }
 
