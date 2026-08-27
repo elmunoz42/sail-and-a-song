@@ -40,14 +40,19 @@ export default function Home() {
       </header>
 
       <section className="hero" id="top">
-        <Image
-          className="hero-image"
-          src="/images/interview-on-boat.jpg"
-          alt="A musician and interviewer sharing a conversation aboard a sailboat off Santa Barbara"
-          fill
-          priority
-          sizes="100vw"
-        />
+        <video
+          className="hero-video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          poster="/images/interview-on-boat.jpg"
+          aria-hidden="true"
+          tabIndex={-1}
+        >
+          <source src="/hero-background.mp4" type="video/mp4" />
+        </video>
         <div className="hero-wash" />
         <div className="hero-content">
           <p className="eyebrow light">Music made where the horizon begins</p>
