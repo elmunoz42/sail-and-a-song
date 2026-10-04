@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Script from "next/script";
 
+import HeroVideo from "./hero-video";
+
 const episodes = [
   {
     title: "Zach Gill & David Segall",
@@ -42,26 +44,14 @@ export default function Home() {
       </header>
 
       <section className="hero" id="top">
-        <video
-          className="hero-video"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          poster="/images/interview-on-boat.jpg"
-          aria-hidden="true"
-          tabIndex={-1}
-        >
-          <source src="/hero-background.mp4" type="video/mp4" />
-        </video>
+        <HeroVideo />
         <div className="hero-wash" />
         <div className="hero-content">
-          <p className="eyebrow light">Music made where the horizon begins</p>
-          <h1>Every song<br />has a <em>story.</em></h1>
+          <h1>Where the music<br />meets the <em>sea.</em></h1>
           <p className="hero-copy">
-            Intimate acoustic performances and honest conversations with
-            songwriters—recorded aboard a sailboat in Santa Barbara Harbor.
+            Think “Tiny Concerts” meets “VH1 Storytellers”… on the ocean.
+            Sail &amp; A Song is a video series and podcast aimed at inspiring
+            us to listen and connect with the medicine of music and Nature.
           </p>
           <div className="hero-actions">
             <a className="button button-light" href="#featured"><span className="play-mini">▶</span> Watch the featured episode</a>
@@ -71,10 +61,27 @@ export default function Home() {
         <p className="harbor-note">34.4040° N&nbsp;&nbsp; · &nbsp;&nbsp;119.6920° W</p>
       </section>
 
+      <section className="trailer" id="trailer">
+        <div className="trailer-heading">
+          <p className="eyebrow">Start here</p>
+          <h2>A sample of<br />our <em>show.</em></h2>
+        </div>
+        <div className="video-frame">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/zc95edgK1os?rel=0"
+            title="A sample of the Sail & A Song show"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            loading="lazy"
+            allowFullScreen
+          />
+        </div>
+      </section>
+
       <section className="intro" id="about">
         <div className="section-label"><span>01</span> The idea</div>
         <div className="intro-copy">
-          <p className="eyebrow">A different kind of music lesson</p>
+          <p className="eyebrow">A different kind of conversation</p>
           <h2>Part performance.<br />Part conversation.<br /><em>All heart.</em></h2>
           <p className="lead">
             Sail &amp; A Song brings emerging and established musicians aboard
@@ -82,9 +89,14 @@ export default function Home() {
             voice, an instrument, and the story behind the song.
           </p>
           <p>
-            After each performance, artists open up the creative process—from
-            the first lyric and melodic spark to chord progressions,
-            collaboration, and the courage it takes to share something true.
+            After each performance, artists walk us through it—from the first
+            lyric and melodic spark to chord progressions, collaboration, and
+            the courage it takes to share something true.
+          </p>
+          <p>
+            Through exploring the creative process of songwriters and
+            storytellers, our goal is to inspire more people to create and
+            express their emotions and life experiences through music.
           </p>
         </div>
         <aside className="quote-card">
@@ -147,16 +159,17 @@ export default function Home() {
         </div>
         <div className="learning-copy">
           <p className="eyebrow light">Creativity belongs to everyone</p>
-          <h2>Learn how<br />songs are <em>made.</em></h2>
+          <h2>Self-expression<br />as <em>medicine.</em></h2>
           <p>
-            Each episode turns inspiration into something you can understand
-            and try for yourself—wherever you are in your creative life.
+            We care less about technique than about what music does for the
+            person making it. Putting a feeling into a form—a lyric, a melody,
+            a voice—is something all of us can do, and all of us need.
           </p>
           <div className="lesson-list">
-            <div><span>01</span><h3>Lyrics</h3><p>Finding the words that feel true.</p></div>
-            <div><span>02</span><h3>Melody</h3><p>Following the musical idea.</p></div>
-            <div><span>03</span><h3>Harmony</h3><p>Building feeling through chords.</p></div>
-            <div><span>04</span><h3>Expression</h3><p>Making a song unmistakably yours.</p></div>
+            <div><span>01</span><h3>Feeling</h3><p>Noticing what you’re carrying.</p></div>
+            <div><span>02</span><h3>Voice</h3><p>Trusting it’s worth saying out loud.</p></div>
+            <div><span>03</span><h3>Courage</h3><p>Sharing it before it feels ready.</p></div>
+            <div><span>04</span><h3>Relief</h3><p>What gets lighter once it’s out.</p></div>
           </div>
         </div>
       </section>
