@@ -49,7 +49,8 @@ export default function Home() {
         <div className="hero-content">
           <h1>Where the music<br />meets the <em>sea.</em></h1>
           <p className="hero-copy">
-            Think “Tiny Concerts” meets “VH1 Storytellers”… on the ocean.
+            Think “Tiny Desk Concerts” meets “VH1 Storytellers”… on the
+            ocean.
             Sail &amp; A Song is a video series and podcast aimed at inspiring
             us to listen and connect with the medicine of music and Nature.
           </p>
