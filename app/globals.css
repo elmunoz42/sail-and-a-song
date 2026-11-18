@@ -68,7 +68,7 @@ nav a:hover { color: var(--accent-soft); opacity: 1; }
 .eyebrow::before { content: ""; display: inline-block; width: 34px; height: 1px; vertical-align: middle; margin-right: 14px; background: currentColor; opacity: .8; }
 .eyebrow.light { color: var(--accent-soft); }
 h1, h2 { margin: 0; font-family: var(--font-serif-stack); font-weight: 400; letter-spacing: -.03em; line-height: .95; }
-h1 { font-size: clamp(45px, 5.87vw, 88px); }
+h1 { font-size: clamp(45px, 5.87vw, 88px); line-height: 1.1; }
 h2 { font-size: clamp(50px, 6vw, 92px); }
 h1 em, h2 em { color: var(--accent); font-weight: 400; font-style: italic; }
 .hero h1 { text-align: right; }
@@ -186,6 +186,31 @@ footer p { margin: 0; font: italic 15px/1.6 var(--font-serif-stack); color: rgba
 .footer-links { display: flex; flex-direction: column; gap: 12px; text-transform: uppercase; letter-spacing: .13em; font-size: 9px; font-weight: 600; }
 footer small { font-size: 8px; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.42); }
 
+/* Mission page */
+.mission-hero { position: relative; padding: 210px 8vw 130px; color: var(--white); text-align: center; display: flex; flex-direction: column; align-items: center; background: radial-gradient(circle at 50% 120%, var(--sea), transparent 55%), var(--deep); }
+.mission-hero .eyebrow::before { display: none; }
+.mission-statement { max-width: 860px; font: 26px/1.6 var(--font-serif-stack); color: rgba(255,253,248,.92); margin: 44px 0 34px; }
+.mission-about { padding: 140px 8vw 150px; display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 6vw; align-items: start; }
+.mission-rows { display: grid; gap: 120px; }
+.mission-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, 30vw); gap: 6vw; align-items: start; }
+.mission-row-flip { grid-template-columns: minmax(260px, 30vw) minmax(0, 1fr); align-items: center; }
+.mission-row-flip .mission-copy .lead:first-child { margin-top: 0; }
+.mission-copy { max-width: 760px; }
+.mission-copy .lead { font: 24px/1.55 var(--font-serif-stack); color: var(--deep); margin: 40px 0 22px; }
+.mission-copy > p:not(.eyebrow):not(.lead) { font-size: 16px; line-height: 1.8; color: var(--muted); margin: 0 0 20px; max-width: 620px; }
+.mission-copy .text-link { margin-top: 18px; }
+.mission-photo { position: relative; aspect-ratio: 9 / 10; margin-top: 95px; border-radius: 4px; overflow: hidden; box-shadow: 0 24px 60px rgba(13,43,44,.14); }
+/* tallest crop that keeps all three faces; shifted right so the right-hand guest isn't clipped */
+.mission-photo img { object-position: 92% center; }
+.mission-photo-tall { aspect-ratio: 4 / 5; margin-top: 0; }
+.mission-photo-tall img { object-position: center 45%; }
+.sponsorship { background: var(--sea); padding: 130px 8vw 140px; display: grid; grid-template-columns: .85fr 1.15fr; gap: 6vw; align-items: start; }
+.sponsorship-card { color: var(--white); position: sticky; top: 120px; }
+.sponsorship-card h2 { font-size: clamp(44px, 4.6vw, 70px); }
+.sponsorship-card h2 em { color: var(--accent-soft); }
+.sponsorship-card > p:not(.eyebrow) { max-width: 460px; margin: 30px 0 0; font: 17px/1.75 var(--font-serif-stack); color: rgba(255,255,255,.88); border-left: 1px solid rgba(255,255,255,.3); padding-left: 28px; }
+nav a[aria-current="page"] { color: var(--accent-soft); }
+
 @media (max-width: 900px) {
   .site-header { height: 78px; }
   nav { display: none; }
@@ -208,6 +233,14 @@ footer small { font-size: 8px; letter-spacing: .14em; text-transform: uppercase;
   .contact { grid-template-columns: 1fr; gap: 44px; padding: 100px 7vw 110px; }
   .contact-heading { position: static; }
   footer { grid-template-columns: 1fr 1fr; }
+  .mission-hero { padding: 160px 7vw 100px; }
+  .mission-statement { font-size: 22px; }
+  .mission-about { grid-template-columns: 1fr; padding: 100px 7vw; gap: 34px; }
+  .mission-photo { margin-top: 10px; max-width: 520px; }
+  .mission-rows { gap: 70px; }
+  .mission-row, .mission-row-flip { grid-template-columns: 1fr; gap: 34px; }
+  .sponsorship { grid-template-columns: 1fr; gap: 44px; padding: 100px 7vw 110px; }
+  .sponsorship-card { position: static; }
 }
 
 @media (max-width: 680px) {
@@ -237,6 +270,10 @@ footer small { font-size: 8px; letter-spacing: .14em; text-transform: uppercase;
   .closing-actions { flex-direction: column; align-items: center; gap: 24px; }
   .contact-form { padding: 30px 24px; }
   footer { grid-template-columns: 1fr; gap: 28px; }
+  .mission-statement { font-size: 19px; }
+  .mission-copy .lead { font-size: 21px; }
+  .mission-photo-tall { display: none; }
+  .sponsorship-card > p:not(.eyebrow) { padding-left: 20px; font-size: 16px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

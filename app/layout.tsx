@@ -21,19 +21,19 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
     : "http://localhost:3000");
 
 export const metadata: Metadata = {
-  title: "Sail & A Song | Music, Stories & Salt Air",
+  title: "Sail and a Song | Music, Stories & Salt Air",
   description:
     "Intimate acoustic performances and conversations with songwriters, filmed aboard a sailboat in Santa Barbara Harbor.",
   metadataBase: new URL(siteUrl),
   openGraph: {
-    title: "Sail & A Song",
+    title: "Sail and a Song",
     description: "Every song has a story. Come hear it from the harbor.",
     type: "website",
-    images: [{ url: "/og.png", width: 1730, height: 909, alt: "Sail & A Song — Music, Stories & Salt Air" }],
+    images: [{ url: "/og.png", width: 1730, height: 909, alt: "Sail and a Song — Music, Stories & Salt Air" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sail & A Song",
+    title: "Sail and a Song",
     description: "Music, stories & salt air from Santa Barbara Harbor.",
     images: ["/og.png"],
   },

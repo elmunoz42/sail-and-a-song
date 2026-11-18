@@ -1,6 +1,6 @@
-# Sail & A Song
+# Sail and a Song
 
-Brochure site for Sail & A Song, an educational acoustic performance and
+Brochure site for Sail and a Song, an educational acoustic performance and
 songwriting series filmed aboard a sailboat in Santa Barbara Harbor.
 
 ## Local development

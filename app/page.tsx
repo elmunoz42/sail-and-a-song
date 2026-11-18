@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Script from "next/script";
 
 import HeroVideo from "./hero-video";
@@ -6,7 +7,7 @@ import HeroVideo from "./hero-video";
 const episodes = [
   {
     title: "Zach Gill & David Segall",
-    subtitle: "Episode one · Aboard Sail & A Song",
+    subtitle: "Episode one · Aboard Sail and a Song",
     image: "/images/episode-one.jpg",
     href: "https://www.youtube.com/watch?v=dmm5YLhoB28",
   },
@@ -18,7 +19,7 @@ const episodes = [
   },
   {
     title: "Zach Gill",
-    subtitle: "Debuting an original aboard Sail & A Song",
+    subtitle: "Debuting an original aboard Sail and a Song",
     image: "/images/zach-gill.jpg",
     href: "https://www.youtube.com/watch?v=qEHPwf7ZSHM",
   },
@@ -28,12 +29,13 @@ export default function Home() {
   return (
     <main>
       <header className="site-header">
-        <a className="brand" href="#top" aria-label="Sail and A Song home">
+        <a className="brand" href="#top" aria-label="Sail and a Song home">
           <span className="brand-mark" aria-hidden="true"><i /><b /></span>
-          <span>Sail <em>&amp;</em> A Song</span>
+          <span>Sail <em>and</em> a Song</span>
         </a>
         <nav aria-label="Primary navigation">
           <a href="#about">Our story</a>
+          <Link href="/mission">Mission</Link>
           <a href="#episodes">Episodes</a>
           <a href="#learn">The idea</a>
           <a href="#contact">Contact</a>
@@ -51,7 +53,7 @@ export default function Home() {
           <p className="hero-copy">
             Think “Tiny Desk Concerts” meets “VH1 Storytellers”… on the
             ocean.
-            Sail &amp; A Song is a video series and podcast aimed at inspiring
+            Sail and a Song is a video series and podcast aimed at inspiring
             us to listen and connect with the medicine of music and Nature.
           </p>
           <div className="hero-actions">
@@ -70,7 +72,7 @@ export default function Home() {
         <div className="video-frame">
           <iframe
             src="https://www.youtube-nocookie.com/embed/zc95edgK1os?rel=0"
-            title="A sample of the Sail & A Song show"
+            title="A sample of the Sail and a Song show"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
             loading="lazy"
@@ -85,7 +87,7 @@ export default function Home() {
           <p className="eyebrow">A different kind of conversation</p>
           <h2>Part performance.<br />Part conversation.<br /><em>All heart.</em></h2>
           <p className="lead">
-            Sail &amp; A Song brings emerging and established musicians aboard
+            Sail and a Song brings emerging and established musicians aboard
             for acoustic performances stripped back to what matters most: a
             voice, an instrument, and the story behind the song.
           </p>
@@ -121,7 +123,7 @@ export default function Home() {
         <div className="video-frame">
           <iframe
             src="https://www.youtube-nocookie.com/embed/scZNrqTlSuA?rel=0"
-            title="Sail & A Song with Glen Phillips of Toad the Wet Sprocket"
+            title="Sail and a Song with Glen Phillips of Toad the Wet Sprocket"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
           />
@@ -187,7 +189,7 @@ export default function Home() {
             Follow @sailandasong <span>↗</span>
           </a>
         </div>
-        <a className="instagram-window" href="https://www.instagram.com/sailandasong" target="_blank" rel="noreferrer" aria-label="Open Sail and A Song on Instagram">
+        <a className="instagram-window" href="https://www.instagram.com/sailandasong" target="_blank" rel="noreferrer" aria-label="Open Sail and a Song on Instagram">
           <Image src="/images/interview-on-boat.jpg" alt="An interview and acoustic performance aboard a sailboat" fill sizes="(max-width: 800px) 100vw, 50vw" />
           <div className="instagram-overlay">
             <span className="instagram-icon">◎</span>
@@ -235,14 +237,15 @@ export default function Home() {
       <footer>
         <a className="brand footer-brand" href="#top">
           <span className="brand-mark" aria-hidden="true"><i /><b /></span>
-          <span>Sail <em>&amp;</em> A Song</span>
+          <span>Sail <em>and</em> a Song</span>
         </a>
         <p>Music, stories &amp; salt air.<br />Santa Barbara, California.</p>
         <div className="footer-links">
+          <Link href="/mission">Mission</Link>
           <a href="https://www.instagram.com/sailandasong" target="_blank" rel="noreferrer">Instagram ↗</a>
           <a href="https://www.youtube.com/@sailandasong" target="_blank" rel="noreferrer">YouTube ↗</a>
         </div>
-        <small>© {new Date().getFullYear()} Sail &amp; A Song</small>
+        <small>© {new Date().getFullYear()} Sail and a Song</small>
       </footer>
     </main>
   );
